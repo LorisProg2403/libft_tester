@@ -4,7 +4,7 @@
 	`git clone https://github.com/LorisProg2403/libft_tester.git && cd libft_tester`
 
 ## USE
-global :
+GLOBAL :
 
 	`bash tester.sh`
 
