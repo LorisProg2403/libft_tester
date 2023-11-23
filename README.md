@@ -6,10 +6,13 @@ copy :
 
 ## USE
 global :
+
 	`bash tester.sh`
 
 FT_IS :
+
 	`bash is_tester.sh`
 
 FT_STR :
+
 	`bash str_tester.sh`
