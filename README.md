@@ -1,6 +1,6 @@
 # LIBFT TESTER
 ## INSTALL
-copy : `git clone https://github.com/LorisProg2403/libft_tester.git && cd libft_tester`
+copy : 			`git clone https://github.com/LorisProg2403/libft_tester.git && cd libft_tester`
 
 ## USE
 global : `bash tester.sh`
