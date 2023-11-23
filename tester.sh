@@ -171,6 +171,9 @@ printf "${PURPLE}FT_STR : ${NOCOLOR}\n\n"
 
 printf "FT_STRCHR : "
 tests $STRCHR $CHR 3
+printf "\n"
+printf "FT_STRCMP : "
+tests $STRCMP $CMP 3
 printf "\n\n\n"
 if [[ $CHECK = "OK" ]]
 then
