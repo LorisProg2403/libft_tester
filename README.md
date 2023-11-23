@@ -1,17 +1,17 @@
 # LIBFT TESTER
 ## INSTALL
 
-	`git clone https://github.com/LorisProg2403/libft_tester.git && cd libft_tester`
+	git clone https://github.com/LorisProg2403/libft_tester.git && cd libft_tester
 
 ## USE
 GLOBAL :
 
-	`bash tester.sh`
+	bash tester.sh
 
 FT_IS :
 
-	`bash is_tester.sh`
+	bash is_tester.sh
 
 FT_STR :
 
-	`bash str_tester.sh`
+	bash str_tester.sh
