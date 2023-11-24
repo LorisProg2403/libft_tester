@@ -5,8 +5,6 @@ int main(int ac, char **av)
 {
 	if (ac == 3)
 	{
-		ft_printf("OK\n");
-		return (0);
 		int	ft;
 		int	str;
 		char dst[25];
