@@ -12,8 +12,16 @@ int main(int ac, char **av)
 		char *ft_dst;
 		char *ft_src;
 
-		dst = av[1];
-		ft_dst = av[1];
+		dst = malloc(sizeof(char) * 25);
+		ft_dst = malloc(sizeof(char) * 25);
+		int i = 0;
+		while (av[1][i])
+		{
+			dst[i] = av[1][i]
+			ft_dst[i] = av[1][i];
+		}
+		dst[i] = '\0';
+		ft_dst[i]= '\0';
 
 		src = av[2];
 		ft_src = av[2];
