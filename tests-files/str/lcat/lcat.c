@@ -9,11 +9,18 @@ int main(int ac, char **av)
 		return (0);
 		int	ft;
 		int	str;
-		char dst[25] = av[1];
+		char dst[25];
 		const char *src;
-		char ft_dst[25] = av[1];
+		char ft_dst[25];
 		const char *ft_src;
 
+		int i = 0;
+		while (av[1][i])
+		{
+			dst[i] = av[1][i];
+			ft_dst[i] = av[1][i];
+			i++;
+		}
 		src = av[2];
 		ft_src = av[2];
 
