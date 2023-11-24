@@ -104,7 +104,7 @@ printf "FT_STRJOIN :  "
 tests $STRJOIN $JOIN 4
 printf "\n"
 printf "FT_STRLCAT :  "
-#tests $STRLCAT $LCAT 5
+tests $STRLCAT $LCAT 5
 printf "\n"
 printf "FT_STRLCPY :  "
 #tests $STRLCPY $LCPY 5
