@@ -110,7 +110,7 @@ printf "FT_STRLCPY :  "
 #tests $STRLCPY $LCPY 5
 printf "\n"
 printf "FT_STRLEN :   "
-#tests $STRLEN $LEN 5
+tests $STRLEN $LEN 3
 printf "\n"
 printf "FT_STRMAPI :  "
 #tests $STRMAPI $MAPI 5
