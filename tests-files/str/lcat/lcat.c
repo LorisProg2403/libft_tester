@@ -17,7 +17,7 @@ int main(int ac, char **av)
 		int i = 0;
 		while (av[1][i])
 		{
-			dst[i] = av[1][i]
+			dst[i] = av[1][i];
 			ft_dst[i] = av[1][i];
 		}
 		dst[i] = '\0';
@@ -33,6 +33,8 @@ int main(int ac, char **av)
 			ft_printf("KO\n");
 		else
 			ft_printf("OK\n");
+		free(dst);
+		free(ft_dst);
 	}
 	else
 		ft_printf("KO\n");
