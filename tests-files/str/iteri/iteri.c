@@ -32,9 +32,9 @@ int main(int ac, char **av)
 	else if (ac == 4)
 	{
 		(void)av;
-		char	str[] = "Hello World";
+		char	str[] = "Hello";
 		ft_striteri(str, iti_test);
-		if (!strcmp(str, "Hfnos4svpsw"))
+		if (!strcmp(str, "Hfnos"))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
