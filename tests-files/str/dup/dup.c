@@ -14,5 +14,5 @@ int main(int ac, char **av)
 		free(out);
 	}
 	else
-		ft_printf("OK\n");
+		ft_printf("KO\n");
 }
