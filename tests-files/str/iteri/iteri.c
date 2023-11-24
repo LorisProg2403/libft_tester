@@ -22,7 +22,7 @@ int main(int ac, char **av)
 	else if (ac == 3)
 	{
 		(void)av;
-		char	str[] = "aaaaaaa";
+		char	str[] = "aaaaaa";
 		ft_striteri(str, iti_test);
 		if (!strcmp(str, "abcdef"))
 			ft_printf("OK\n");
