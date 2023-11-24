@@ -24,8 +24,6 @@ int main(int ac, char **av)
 			ft_printf("KO\n");
 		else
 			ft_printf("OK\n");
-		free(dst);
-		free(ft_dst);
 	}
 	else
 		ft_printf("KO\n");
