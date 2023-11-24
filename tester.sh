@@ -157,7 +157,9 @@ tests $ISSIGN $SIGN 3
 printf "\n"
 printf "FT_ISSPACE : "
 tests $ISSPACE $SPACE 7
-printf "\n\n\n"
+printf "\n"
+
+printf "\n\n"
 if [[ $CHECK = "OK" ]]
 then
 	CHECKIS="OK"
@@ -169,12 +171,20 @@ CHECK="OK"
 #FT_STR
 printf "${PURPLE}FT_STR : ${NOCOLOR}\n\n"
 
-printf "FT_STRCHR : "
+printf "FT_STRCHR :   "
 tests $STRCHR $CHR 3
 printf "\n"
-printf "FT_STRCMP : "
+printf "FT_STRCMP :   "
 tests $STRCMP $CMP 3
-printf "\n\n\n"
+printf "\n"
+printf "FT_STRDUP :   "
+tests $STRDUP $DUP 4
+printf "\n"
+printf "FT_STRITERI : "
+tests $STRITERI $ITERI 4
+printf "\n"
+
+printf "\n\n"
 if [[ $CHECK = "OK" ]]
 then
 	CHECKSTR="OK"
