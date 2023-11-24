@@ -14,9 +14,9 @@ int main(int ac, char **av)
 		(void)av;
 		char	str[] = "aBcDeF";
 		char	*out;
-		out = malloc(sizeof(char) * 8)
+		out = malloc(sizeof(char) * 8);
 		if (!out)
-			return;
+			return (1);
 		out = ft_striteri(str, iti_test);
 		if (!strcmp(out, "aCeGiK"))
 			ft_printf("OK\n");
@@ -29,9 +29,9 @@ int main(int ac, char **av)
 		(void)av;
 		char	str[] = "aBcDeF";
 		char	*out;
-		out = malloc(sizeof(char) * 8)
+		out = malloc(sizeof(char) * 8);
 		if (!out)
-			return;
+			return (1);
 		out = ft_striteri(out, iti_test);
 		if (!strcmp(str, "aCeGiK"))
 			ft_printf("OK\n");
