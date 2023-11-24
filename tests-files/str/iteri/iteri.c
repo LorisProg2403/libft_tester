@@ -1,10 +1,11 @@
 #include "../../../../include/libft.h"
 #include <string.h>
 
-void	iti_test(char *c)
+void	iti_test(unsigned int i, char *c)
 {
-	*c = *c + 1;
+	*c = *c + i;
 }
+
 
 int main(int ac, char **av)
 {
