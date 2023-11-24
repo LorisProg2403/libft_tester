@@ -32,9 +32,9 @@ int main(int ac, char **av)
 	else if (ac == 4)
 	{
 		(void)av;
-		char	str[] = "Hello";
+		char	str[] = "Helloo";
 		ft_striteri(str, iti_test);
-		if (!strcmp(str, "Hfnos"))
+		if (!strcmp(str, "Hfnost"))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
@@ -42,9 +42,9 @@ int main(int ac, char **av)
 	else if (ac == 5)
 	{
 		(void)av;
-		char	str[] = "aBcDeF";
+		char	str[] = "1234";
 		ft_striteri(str, iti_test);
-		if (!strcmp(str, "aCe1iK"))
+		if (!strcmp(str, "1357"))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
