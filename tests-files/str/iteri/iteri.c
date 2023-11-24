@@ -19,6 +19,36 @@ int main(int ac, char **av)
 		else
 			ft_printf("KO\n");
 	}
+	if (ac == 3)
+	{
+		(void)av;
+		char	str[] = "aaaaaaa";
+		ft_striteri(str, iti_test);
+		if (!strcmp(str, "abcdef"))
+			ft_printf("OK\n");
+		else
+			ft_printf("KO\n");
+	}
+	if (ac == 4)
+	{
+		(void)av;
+		char	str[] = "aBcDeF";
+		ft_striteri(str, iti_test);
+		if (!strcmp(str, "aCe1iK"))
+			ft_printf("OK\n");
+		else
+			ft_printf("KO\n");
+	}
+	if (ac == 5)
+	{
+		(void)av;
+		char	str[] = "aBcDeF";
+		ft_striteri(str, iti_test);
+		if (!strcmp(str, "aCe1iK"))
+			ft_printf("OK\n");
+		else
+			ft_printf("KO\n");
+	}
 	else
 	{
 		(void)av;
