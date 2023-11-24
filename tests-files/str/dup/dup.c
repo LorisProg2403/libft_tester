@@ -7,7 +7,7 @@ int main(int ac, char **av)
 	{
 		char	*out;
 		out = ft_strdup(av[1]);
-		if (!strcmp(av[1], out));
+		if (!strcmp(av[1], out))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
