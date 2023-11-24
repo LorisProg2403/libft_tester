@@ -101,7 +101,7 @@ printf "FT_STRITERI : "
 tests $STRITERI $ITERI 4
 printf "\n"
 printf "FT_STRJOIN :  "
-#tests $STRJOIN $JOIN 5
+tests $STRJOIN $JOIN 4
 printf "\n"
 printf "FT_STRLCAT :  "
 #tests $STRLCAT $LCAT 5
