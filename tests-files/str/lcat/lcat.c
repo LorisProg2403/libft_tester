@@ -19,6 +19,7 @@ int main(int ac, char **av)
 		{
 			dst[i] = av[1][i];
 			ft_dst[i] = av[1][i];
+			i++;
 		}
 		dst[i] = '\0';
 		ft_dst[i]= '\0';
