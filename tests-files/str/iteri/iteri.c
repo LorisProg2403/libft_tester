@@ -19,7 +19,7 @@ int main(int ac, char **av)
 		else
 			ft_printf("KO\n");
 	}
-	if (ac == 3)
+	else if (ac == 3)
 	{
 		(void)av;
 		char	str[] = "aaaaaaa";
@@ -29,7 +29,7 @@ int main(int ac, char **av)
 		else
 			ft_printf("KO\n");
 	}
-	if (ac == 4)
+	else if (ac == 4)
 	{
 		(void)av;
 		char	str[] = "aBcDeF";
@@ -39,7 +39,7 @@ int main(int ac, char **av)
 		else
 			ft_printf("KO\n");
 	}
-	if (ac == 5)
+	else if (ac == 5)
 	{
 		(void)av;
 		char	str[] = "aBcDeF";
