@@ -98,7 +98,7 @@ printf "FT_STRDUP : "
 tests $STRDUP $DUP 4
 printf "\n"
 printf "FT_STRITERI : "
-#tests $STRITERI $ITERI 5
+tests $STRITERI $ITERI 1
 printf "\n"
 printf "FT_STRJOIN : "
 #tests $STRJOIN $JOIN 5
