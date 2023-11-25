@@ -1,9 +1,10 @@
-#include "../../../../include/libft.h"
+//#include "../../../../include/libft.h"
 #include <string.h>
+#include <stdio.h>
 
 int main(int ac, char **av)
 {
-	if (ac == 2)
+	if (ac == 3)
 	{
 		int	ft;
 		int	str;
@@ -12,7 +13,7 @@ int main(int ac, char **av)
 		char ft_dst[25];
 		const char *ft_src;
 
-		/*int i = 0;
+		int i = 0;
 		while (av[1][i])
 		{
 			dst[i] = av[1][i];
@@ -20,7 +21,7 @@ int main(int ac, char **av)
 			i++;
 		}
 		dst[i] = '\0';
-		ft_dst[i] = '\0';*/
+		ft_dst[i] = '\0';
 		src = av[2];
 		ft_src = av[2];
 
