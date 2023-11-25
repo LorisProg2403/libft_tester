@@ -171,17 +171,53 @@ CHECK="OK"
 #FT_STR
 printf "${PURPLE}FT_STR : ${NOCOLOR}\n\n"
 
-printf "FT_STRCHR :   "
+printf "FT_STRCHR   : "
 tests $STRCHR $CHR 3
 printf "\n"
-printf "FT_STRCMP :   "
+printf "FT_STRCMP   : "
 tests $STRCMP $CMP 3
 printf "\n"
-printf "FT_STRDUP :   "
+printf "FT_STRDUP   : "
 tests $STRDUP $DUP 4
 printf "\n"
 printf "FT_STRITERI : "
 tests $STRITERI $ITERI 4
+printf "\n"
+printf "FT_STRJOIN  : "
+tests $STRJOIN $JOIN 4
+printf "\n"
+printf "FT_STRLCAT  : "
+tests $STRLCAT $LCAT 5
+printf "\n"
+printf "FT_STRLCPY  : "
+tests $STRLCPY $LCPY 5
+printf "\n"
+printf "FT_STRLEN   : "
+tests $STRLEN $LEN 2
+printf "\n"
+printf "FT_STRMAPI  : "
+tests $STRMAPI $MAPI 4
+printf "\n"
+printf "FT_STRNCAT  : "
+tests $STRNCAT $NCAT 4
+printf "\n"
+printf "FT_STRNCMP  : "
+tests $STRNCMP $NCMP 4
+printf "\n"
+printf "FT_STRNEW   : "
+tests $STRNEW $NEW 2
+printf "\n"
+printf "FT_STRNSTR  : "
+tests $STRNSTR $NSTR 5
+printf "\n"
+printf "FT_STRRCHR  : "
+tests $STRRCHR $RCHR 3
+printf "\n"
+printf "FT_SUBSTR   : "
+tests $STRSUBSTR $SUBSTR 3
+printf "\n"
+printf "FT_STRTRIM  : "
+tests $STRTRIM $TRIM 3
 printf "\n"
 
 printf "\n\n"
