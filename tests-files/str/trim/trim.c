@@ -7,7 +7,7 @@ int main(int ac, char **av)
 	{
 		char *out;
 
-		out = ft_strtim(av[1], av[2]);
+		out = ft_strtrim(av[1], av[2]);
 		if (!out)
 			return (1);
 		if (!strcmp(out, av[3]))
