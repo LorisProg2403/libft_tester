@@ -113,7 +113,7 @@ printf "FT_STRLEN :   "
 tests $STRLEN $LEN 2
 printf "\n"
 printf "FT_STRMAPI :  "
-#tests $STRMAPI $MAPI 5
+tests $STRMAPI $MAPI 4
 printf "\n"
 printf "FT_STRNCAT :  "
 #tests $STRNCAT $NCAT 5
