@@ -23,8 +23,8 @@ int main(int ac, char **av)
 	{
 		char	*str;
 
-		str = = "aaaaaa";
-		str = ft_strmap(str, mapi_test);
+		str = "aaaaaa";
+		str = ft_strmapi(str, mapi_test);
 		if (!strcmp(str, "abcdef"))
 			ft_printf("OK\n");
 		else
@@ -35,7 +35,7 @@ int main(int ac, char **av)
 		char	*str;
 
 		str = "Helloo";
-		str = ft_strmap(str, mapi_test);
+		str = ft_strmapi(str, mapi_test);
 		if (!strcmp(str, "Hfnost"))
 			ft_printf("OK\n");
 		else
@@ -46,7 +46,7 @@ int main(int ac, char **av)
 		char	*str;
 
 		str = "1234";
-		str = ft_strmap(str, mapi_test);
+		str = ft_strmapi(str, mapi_test);
 		if (!strcmp(str, "1357"))
 			ft_printf("OK\n");
 		else
