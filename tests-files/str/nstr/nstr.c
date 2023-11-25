@@ -9,7 +9,11 @@ int main(int ac, char **av)
 
 		bzero(buf, 10);
 		strcpy(buf, "un deux 9");
-		if (!strcmp(strnstr(buf, "deux", 10), ft_strnstr(buf, "deux", 10)))
+		if (!strnstr(buf, "deux", 10) && !ft_strnstr(buf, "deux", 10))
+			ft_printf("OK\n");
+		else if (!strnstr(buf, "deux", 10) || !ft_strnstr(buf, "deux", 10))
+			ft_printf("KO\n");
+		else if (!strcmp(strnstr(buf, "deux", 10), ft_strnstr(buf, "deux", 10)))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
@@ -20,7 +24,11 @@ int main(int ac, char **av)
 
 		bzero(buf, 10);
 		strcpy(buf, "un deux 9");
-		if (!strcmp(strnstr(buf, "9", 3), ft_strnstr(buf, "9", 3)))
+		if (!strnstr(buf, "9", 3) && !ft_strnstr(buf, "9", 3))
+			ft_printf("OK\n");
+		else if (!strnstr(buf, "9", 3) || !ft_strnstr(buf, "9", 3))
+			ft_printf("KO\n");
+		else if (!strcmp(strnstr(buf, "9", 3), ft_strnstr(buf, "9", 3)))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
@@ -31,7 +39,11 @@ int main(int ac, char **av)
 
 		bzero(buf, 10);
 		strcpy(buf, "un deux 9");
-		if (!strcmp(strnstr(buf, "", 6), ft_strnstr(buf, "", 6)))
+		if (!strnstr(buf, "", 6) && !ft_strnstr(buf, "", 6))
+			ft_printf("OK\n");
+		else if (!strnstr(buf, "", 6) || !ft_strnstr(buf, "", 6))
+			ft_printf("KO\n");
+		else if (!strcmp(strnstr(buf, "", 6), ft_strnstr(buf, "", 6)))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
@@ -42,7 +54,11 @@ int main(int ac, char **av)
 
 		bzero(buf, 10);
 		strcpy(buf, "un deux 9");
-		if (!strcmp(strnstr(buf, "deux", 5), ft_strnstr(buf, "deux", 5)))
+		if (!strnstr(buf, "deux", 5) && !ft_strnstr(buf, "deux", 5))
+			ft_printf("OK\n");
+		else if (!strnstr(buf, "deux", 5) || !ft_strnstr(buf, "deux", 5))
+			ft_printf("KO\n");
+		else if (!strcmp(strnstr(buf, "deux", 5), ft_strnstr(buf, "deux", 5)))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
@@ -53,7 +69,11 @@ int main(int ac, char **av)
 
 		bzero(buf, 10);
 		strcpy(buf, "un deux 9");
-		if (!strcmp(strnstr(buf, "9", 10), ft_strnstr(buf, "9", 10)))
+		if (!strnstr(buf, "9", 10) && !ft_strnstr(buf, "9", 10))
+			ft_printf("OK\n");
+		else if (!strnstr(buf, "9", 10) || !ft_strnstr(buf, "9", 10))
+			ft_printf("KO\n");
+		else if (!strcmp(strnstr(buf, "9", 10), ft_strnstr(buf, "9", 10)))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
