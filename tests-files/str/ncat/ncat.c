@@ -23,7 +23,7 @@ int main(int ac, char **av)
 
 		char *str;
 		char *ft_str;
-		str = malloc(sizeof(char * 25));
+		str = malloc(sizeof(char) * 25);
 		if (!str)
 			return (1);
 		ft_str = malloc(sizeof(char) * 25);
