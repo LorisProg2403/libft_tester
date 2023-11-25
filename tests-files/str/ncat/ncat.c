@@ -1,5 +1,7 @@
-#include "../../../../include/libft.h"
+//#include "../../../../include/libft.h"
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int main(int ac, char **av)
 {
@@ -21,24 +23,14 @@ int main(int ac, char **av)
 		const char *src = av[2];
 		const char *ft_src = av[2];
 
-		char *str;
-		char *ft_str;
-		str = malloc(sizeof(char) * 25);
-		if (!str)
-			return (1);
-		ft_str = malloc(sizeof(char) * 25);
-		if (!ft_str)
-			return (1);
-		str = strncat(dst, src, (size_t)ft_atoi(av[3]));
-		ft_str = ft_strncat(ft_dst, ft_src, (size_t)ft_atoi(av[3]));
+		strncat(dst, src, (size_t)atoi(av[3]));
+		ft_strncat(ft_dst, ft_src, (size_t)ft_atoi(av[3]));
 
 		if (!strcmp(dst, ft_dst))
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
-		free(str);
-		free(ft_str);
 	}
 	else
-		ft_printf("KO\n");
+		printf("KO\n");
 }
