@@ -134,7 +134,7 @@ printf "FT_SUBSTR   : "
 tests $STRSUBSTR $SUBSTR 3
 printf "\n"
 printf "FT_STRTRIM  : "
-#tests $STRTRIM $TRIM 5
+tests $STRTRIM $TRIM 3
 printf "\n"
 
 make fclean -C $ROOT
