@@ -125,15 +125,6 @@ isok() {
 	fi
 }
 
-endtest() {
-	local n=$(printf "%.0f" "$(bc <<< "scale=2; ($NOK / $NT) * 100" | sed 's/\(\.[0-9]\)0\+$/\1/')")
-	if [[ $n -gt 49 ]]
-	then
-		printf "\n${GREEN}$n / 100 ${NOCOLOR}\n"
-	else
-		printf "\n${RED}$n / 100 ${NOCOLOR}\n"
-	fi
-}
 #FT_IS
 printf "${PURPLE}FT_IS : ${NOCOLOR}\n\n"
 
@@ -232,7 +223,5 @@ CHECK="OK"
 isok "FT_IS" $CHECKIS
 isok "FT_STR" $CHECKSTR
 printf "\n"
-
-endtest
 
 make fclean -C $ROOT
