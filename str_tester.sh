@@ -122,7 +122,7 @@ printf "FT_STRNCMP :  "
 tests $STRNCMP $NCMP 4
 printf "\n"
 printf "FT_STRNEW :   "
-#tests $STRNEW $NEW 5
+tests $STRNEW $NEW 2
 printf "\n"
 printf "FT_STRNSTR :  "
 #tests $STRNSTR $NSTR 5
