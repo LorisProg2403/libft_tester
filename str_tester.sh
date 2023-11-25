@@ -125,15 +125,15 @@ printf "FT_STRNEW   : "
 tests $STRNEW $NEW 2
 printf "\n"
 printf "FT_STRNSTR  : "
-#tests $STRNSTR $NSTR 5
+tests $STRNSTR $NSTR 5
 printf "\n"
-printf "FT_STRRCHR :  "
+printf "FT_STRRCHR  : "
 #tests $STRRCHR $RCHR 5
 printf "\n"
-printf "FT_SUBSTR :   "
+printf "FT_SUBSTR   : "
 #tests $STRSUBSTR $SUBSTR 5
 printf "\n"
-printf "FT_STRTRIM :  "
+printf "FT_STRTRIM  : "
 #tests $STRTRIM $TRIM 5
 printf "\n"
 
