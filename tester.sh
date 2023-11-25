@@ -126,7 +126,7 @@ isok() {
 }
 
 endtest() {
-	local n=$(printf "%.0f" "$(echo "scale=2; ($NOK / $NT) * 100" | bc)")
+	local n=$(printf "%.0f" "$(bc <<< "scale=2; ($NOK / $NT) * 100")")
 	if [[ $n -gt 49 ]]
 	then
 		printf "\n${GREEN}$n / 100 ${NOCOLOR}\n"
