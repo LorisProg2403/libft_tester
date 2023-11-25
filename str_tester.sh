@@ -116,7 +116,7 @@ printf "FT_STRMAPI :  "
 tests $STRMAPI $MAPI 4
 printf "\n"
 printf "FT_STRNCAT :  "
-#tests $STRNCAT $NCAT 5
+tests $STRNCAT $NCAT 4
 printf "\n"
 printf "FT_STRNCMP :  "
 #tests $STRNCMP $NCMP 5
