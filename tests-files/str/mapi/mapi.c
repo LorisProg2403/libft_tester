@@ -18,6 +18,7 @@ int main(int ac, char **av)
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
+		free(str);
 	}
 	else if (ac == 3)
 	{
@@ -29,6 +30,7 @@ int main(int ac, char **av)
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
+		free(str);
 	}
 	else if (ac == 4)
 	{
@@ -40,6 +42,7 @@ int main(int ac, char **av)
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
+		free(str);
 	}
 	else
 	{
@@ -51,5 +54,6 @@ int main(int ac, char **av)
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
+		free(str);
 	}
 }
