@@ -126,7 +126,7 @@ isok() {
 }
 
 endtest() {
-	local n=$(printf "%.0f" "$(bc <<< "scale=2; ($NOK / $NT) * 100")")
+	local n=$(printf "%.0f" "$(bc <<< "scale=2; ($NOK / $NT) * 100" | sed 's/\(\.[0-9]\)0\+$/\1/')")
 	if [[ $n -gt 49 ]]
 	then
 		printf "\n${GREEN}$n / 100 ${NOCOLOR}\n"
