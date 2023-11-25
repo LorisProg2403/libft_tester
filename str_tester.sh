@@ -131,7 +131,7 @@ printf "FT_STRRCHR  : "
 tests $STRRCHR $RCHR 3
 printf "\n"
 printf "FT_SUBSTR   : "
-#tests $STRSUBSTR $SUBSTR 5
+tests $STRSUBSTR $SUBSTR 1
 printf "\n"
 printf "FT_STRTRIM  : "
 #tests $STRTRIM $TRIM 5
