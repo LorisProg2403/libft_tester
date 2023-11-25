@@ -13,6 +13,7 @@ int main(int ac, char **av)
 			ft_printf("OK\n");
 		else
 			ft_printf("KO\n");
+		free(out);
 	}
 	else
 		ft_printf("KO\n");
