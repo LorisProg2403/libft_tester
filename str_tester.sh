@@ -107,7 +107,7 @@ printf "FT_STRLCAT :  "
 tests $STRLCAT $LCAT 5
 printf "\n"
 printf "FT_STRLCPY :  "
-tests $STRLCPY $LCPY 1
+tests $STRLCPY $LCPY 5
 printf "\n"
 printf "FT_STRLEN :   "
 tests $STRLEN $LEN 2
