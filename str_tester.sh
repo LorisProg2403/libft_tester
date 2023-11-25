@@ -119,7 +119,7 @@ printf "FT_STRNCAT :  "
 tests $STRNCAT $NCAT 4
 printf "\n"
 printf "FT_STRNCMP :  "
-#tests $STRNCMP $NCMP 5
+tests $STRNCMP $NCMP
 printf "\n"
 printf "FT_STRNEW :   "
 #tests $STRNEW $NEW 5
