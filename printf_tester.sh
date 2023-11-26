@@ -42,7 +42,8 @@ print_tests() {
 		($DIR/print $(cat $DIR/test$i.txt) > stdout2) & pid=$!
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
-		printf "$stdout2 print \n"
+		printf "\n$stdout fprint \n"
+		printf "\n$stdout2 print \n"
 		difference=$(diff <(echo "$stdout") <(echo "$stdout2"))
 		if  [ -z "$difference" ]
 		then
