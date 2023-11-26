@@ -39,11 +39,11 @@ print_tests() {
 	do
 		#($DIR/$exec $(cat $DIR/test$i.txt) > stdout) & pid=$!
 		#local out1=$($DIR/$exec $(cat $DIR/test$i.txt)) & pid=$!
-		local out1=$($DIR/$exec)
+		local out1=$($DIR/$exec) & pid=$!
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
 		#local out2=$($DIR/print $(cat $DIR/test$i.txt)) & pid=$!
-		local out2=$($DIR/print)
+		local out2=$($DIR/print) & pid=$!
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
 		#(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
