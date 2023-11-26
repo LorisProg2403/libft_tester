@@ -38,8 +38,8 @@ print_tests() {
 	for ((i=1;i<=$n;i++));
 	do
 		#($DIR/$exec $(cat $DIR/test$i.txt) > stdout) & pid=$!
-		local out1=$($DIR/$exec $(cat $DIR/test$i.txt)) & pid=$!
-		local out2=$($DIR/print $(cat $DIR/test$i.txt)) & pid=$!
+		local out1=$($DIR/$exec $(cat $DIR/test$i.txt))
+		local out2=$($DIR/print $(cat $DIR/test$i.txt))
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		#($DIR/print $(cat $DIR/test$i.txt) > stdout2) & pid=$!
 		#(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
