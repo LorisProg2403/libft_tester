@@ -38,10 +38,12 @@ print_tests() {
 	for ((i=1;i<=$n;i++));
 	do
 		#($DIR/$exec $(cat $DIR/test$i.txt) > stdout) & pid=$!
-		local out1=$($DIR/$exec $(cat $DIR/test$i.txt)) & pid=$!
+		#local out1=$($DIR/$exec $(cat $DIR/test$i.txt)) & pid=$!
+		local out1=$($DIR/$exec)
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
-		local out2=$($DIR/print $(cat $DIR/test$i.txt)) & pid=$!
+		#local out2=$($DIR/print $(cat $DIR/test$i.txt)) & pid=$!
+		local out2=$($DIR/print)
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
 		#(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
@@ -57,7 +59,7 @@ print_tests() {
 		else
 			printf "${RED}[KO] ${NOCOLOR}"
 		fi
-		rm -rf  stdout stdout2
+		rm -rf  out1 out2
 	done
 	make fclean -C $DIR
 }
