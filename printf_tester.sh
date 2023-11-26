@@ -55,5 +55,5 @@ print_tests() {
 }
 
 printf "FT_PRINTF_CHAR : "
-tests $STRCHR $CHR 3
+print_tests $STRCHR $CHR 3
 printf "\n"
