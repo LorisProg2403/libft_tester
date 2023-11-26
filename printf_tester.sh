@@ -57,3 +57,5 @@ print_tests() {
 printf "FT_PRINTF_CHAR : "
 print_tests $PCHAR $CHAR 3
 printf "\n"
+
+make fclean -C $ROOT
