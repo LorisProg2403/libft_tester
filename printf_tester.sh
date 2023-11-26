@@ -37,14 +37,16 @@ print_tests() {
 	make -C $DIR
 	for ((i=1;i<=$n;i++));
 	do
-		($DIR/$exec $(cat $DIR/test$i.txt) > stdout) & pid=$!
+		#($DIR/$exec $(cat $DIR/test$i.txt) > stdout) & pid=$!
+		local out1=$($DIR/$exec $(cat $DIR/test$i.txt)) & pid=$!
+		locat out2=$($DIR/print $(cat $DIR/test$i.txt)) & pid=$!
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
-		($DIR/print $(cat $DIR/test$i.txt) > stdout2) & pid=$!
-		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
+		#($DIR/print $(cat $DIR/test$i.txt) > stdout2) & pid=$!
+		#(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
-		printf "\n$stdout fprint \n"
-		printf "\n$stdout2 print \n"
-		difference=$(diff <(echo "$stdout") <(echo "$stdout2"))
+		#printf "\n$stdout fprint \n"
+		#printf "\n$stdout2 print \n"
+		difference=$(diff <(echo "$out1") <(echo "$out2"))
 		if  [ -z "$difference" ]
 		then
 			printf "${GREEN}[OK] ${NOCOLOR}"
