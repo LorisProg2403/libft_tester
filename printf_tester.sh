@@ -37,9 +37,9 @@ print_tests() {
 	make -C $DIR
 	for ((i=1;i<=$n;i++));
 	do
-		($DIR/$exec > stdout) & pid=$!
+		($DIR/$exec $(cat $DIR/test$i.txt) > stdout) & pid=$!
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
-		($DIR/print > stdout2) & pid=$!
+		($DIR/print $(cat $DIR/test$i.txt) > stdout2) & pid=$!
 		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
 		wait $pid 2>/dev/null;
 		difference=$(diff <(echo "$stdout") <(echo "$stdout2"))
