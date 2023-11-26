@@ -1,0 +1,59 @@
+ROOT=..
+
+PCHAR=tests-files/printf/char
+CHAR=char
+
+
+TIME_LIMIT=1000
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+CYAN='\033[0;36m'
+PURPLE='\033[0;34m'
+YELLOW='\033[0;33m'
+NOCOLOR='\033[0m'
+
+printf "\n${CYAN}╔══════════════════════════════════════════════════════════════════════════════╗${NOCOLOR}\n"
+printf "${CYAN}║                           ${PURPLE}Welcome to LIBFT testers${CYAN}                           ║${NOCOLOR}\n"  #54 / 2 = 27 123456789012345678901234567
+printf "${CYAN}╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝${NOCOLOR}\n"
+printf "${CYAN}                        ║            ${YELLOW}PRINTF${CYAN}            ║${NOCOLOR}\n"
+printf "${CYAN}                        ╚══════════════════════════════╝${NOCOLOR}\n\n"
+
+make -C $ROOT
+
+if [[ -f "$ROOT/libft.a" ]]
+then
+	printf "${GREEN}\xE2\x9C\x94 Libft compilation OK${NOCOLOR}\n\n"
+else
+	printf "${RED}\xE2\x9D\x8C Libft compilation KO${NOCOLOR}\n\n"
+	exit 1
+fi
+
+print_tests() {
+	local DIR=$1
+	local exec=$2
+	local n=$3
+
+	make -C $DIR
+	for ((i=1;i<=$n;i++));
+	do
+		($DIR/$exec > stdout) & pid=$!
+		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
+		($DIR/print > stdout2) & pid=$!
+		(sleep $TIME_LIMIT && kill -HUP $pid) 2>/dev/null & watcher=$!
+		wait $pid 2>/dev/null;
+		difference=$(diff <(echo "$stdout") <(echo "$stdout2"))
+		if  [ -z "$difference" ]
+		then
+			printf "${GREEN}[OK] ${NOCOLOR}"
+		else
+			printf "${RED}[KO] ${NOCOLOR}"
+		fi
+		rm -rf  stdout stdout2
+	done
+	make fclean -C $DIR
+}
+
+printf "FT_PRINTF_CHAR : "
+tests $STRCHR $CHR 3
+printf "\n"
