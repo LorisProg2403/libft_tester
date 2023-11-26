@@ -13,7 +13,7 @@ all : 		$(NAME)
 
 
 $(NAME) :
-			@$(CC) $(SRC)  -o $(NAME)
+			@$(CC) $(SRC) $(LIBFT) -o $(NAME)
 			@$(CC) print.c -o print
 
 fclean :
